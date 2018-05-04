@@ -1,0 +1,36 @@
+{
+  "name": "Pup-Tracker",
+  "version": "1.0.0",
+  "description": "NSS Back-end Capstone - A web app using Node and AngularJS to keep track of your new puppy!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarahmorris926/Pup-Tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarahmorris926/Pup-Tracker/issues"
+  },
+  "homepage": "https://github.com/sarahmorris926/Pup-Tracker#readme",
+  "dependencies": {
+    "angular": "^1.6.10",
+    "angular-route": "^1.6.10",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "bootstrap": "^4.1.1",
+    "concurrently": "^3.5.1",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pg": "^7.4.1",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.37.6"
+  }
+}
