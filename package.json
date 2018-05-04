@@ -4,7 +4,16 @@
   "description": "NSS Back-end Capstone - A web app using Node and AngularJS to keep track of your new puppy!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "create-db": "node create-db.js", 
+    "sass": "node-sass client/sass/ -o client/css/",
+    "lint": "eslint --color **/*.js --ignore-pattern node_modules/",
+    "dev": "concurrently \"nodemon server.js\" \"rerun-script\"",
+  },
+  "watches": {
+    "sass": [
+      "client/sass/*.scss"
+    ],
+    "lint": "**/*.js"
   },
   "repository": {
     "type": "git",
