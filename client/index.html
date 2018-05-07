@@ -4,9 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
   <title>Pup Tracker</title>
 </head>
-<body>
+<body ng-app="PupTracker">
   <h1> Pup Tracker! </h1>
+
+  <div ng-view></div>
+
+
+  <script src="angular/angular.min.js"></script>
+  <script src="angular-route/angular-route.min.js"></script>
+  <script src="app.js"></script>
+
+  <!-- factories -->
+  <script src="factories/movieFactory.js"></script>
+  <!-- controllers -->
+  <script src="controllers/testCtrl.js"></script>
+  <script src="controllers/movieCtrl.js"></script>
 </body>
 </html>
