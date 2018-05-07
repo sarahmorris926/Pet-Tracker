@@ -4,7 +4,7 @@
   "description": "NSS Back-end Capstone - A web app using Node and AngularJS to keep track of your new puppy!",
   "main": "index.js",
   "scripts": {
-    "create-db": "node create-db.js", 
+    "create-db": "node create-db.js",
     "sass": "node-sass client/sass/ -o client/css/",
     "lint": "eslint --color **/*.js --ignore-pattern node_modules/",
     "dev": "concurrently \"nodemon server.js\" \"rerun-script\""
@@ -36,10 +36,12 @@
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
+    "node-sass": "^4.9.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "pg": "^7.4.1",
     "pg-hstore": "^2.3.2",
+    "rerun-script": "^0.6.0",
     "sequelize": "^4.37.6"
   }
 }
