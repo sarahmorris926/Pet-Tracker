@@ -1,5 +1,3 @@
-// has many Events
-
 "use strict";
 
 module.exports = (sequelize, DataTypes) => {
