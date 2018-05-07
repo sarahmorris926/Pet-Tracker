@@ -32,5 +32,8 @@ module.exports = (sequelize, DataTypes) => {
     Pet.hasMany(models.Event, {
       foreignKey: "pet_id"
     });
+    Pet.hasMany(models.Weight, {
+      foreignKey: "pet_id"
+    })
   };
 };
