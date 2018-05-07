@@ -2,13 +2,7 @@
 
 let models = require("./server/models");
 
-models.sequelize
-  .sync({ force: true })
-  .then(() => {
-    return models.User.create({
-      // username stuff
-    });
-  })
-  .then(() => {
-    process.exit();
-  });
+models.sequelize.sync({ force: true }).then(() => {
+  console.log("Database created");
+  process.exit();
+});

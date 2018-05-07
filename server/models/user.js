@@ -11,10 +11,8 @@ module.exports = function(sequelize, DataTypes) {
   User.associate = (models) => {
     User.belongsToMany (models.Pet, {
       through: {
-        model: "user_pet",
-        unique: false
-      },
-      constraints: false
+        model: "user_pet"
+      }
     });
     User.hasMany (models.Event, {
       foreignKey: "user_id"
