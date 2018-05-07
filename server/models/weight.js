@@ -14,4 +14,5 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: "pet_id"
     });
   };
+  return Weight;
 };

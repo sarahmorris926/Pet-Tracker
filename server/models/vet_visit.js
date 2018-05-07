@@ -7,4 +7,5 @@ module.exports = (sequelize, DataTypes) => {
     medicine_administered: DataTypes.STRING,
     notes: DataTypes.TEXT
   }, {tableName: "vet_visit", timestamps: true});
+  return Vet_Visit;
 }

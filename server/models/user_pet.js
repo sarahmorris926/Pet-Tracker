@@ -8,4 +8,5 @@ module.exports = function(sequelize, DataTypes) {
     },
     { tableName: "user_pet", timestamps: false }
   );
+  return User_Pet;
 };

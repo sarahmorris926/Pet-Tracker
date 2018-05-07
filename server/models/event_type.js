@@ -9,8 +9,9 @@ module.exports = (sequelize, DataTypes) => {
     { tableName: "event_type", timestamps: true }
   );
   Event_Type.associate = function(models) {
-    Event_Type.hasMany(models.Event, {
+    Event_Type.hasMany(models.Events, {
       foreignKey: "event_type_id"
     });
   };
+  return Event_Type;
 };

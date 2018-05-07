@@ -25,4 +25,5 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: "event_type_id"
     });
   };
+  return Events;
 };

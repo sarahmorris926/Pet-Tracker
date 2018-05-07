@@ -14,8 +14,9 @@ module.exports = function(sequelize, DataTypes) {
         model: "user_pet"
       }
     });
-    User.hasMany (models.Event, {
+    User.hasMany (models.Events, {
       foreignKey: "user_id"
     });
   }
+  return User;
 }

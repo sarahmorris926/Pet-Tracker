@@ -29,11 +29,12 @@ module.exports = (sequelize, DataTypes) => {
         unique: true
       }
     });
-    Pet.hasMany(models.Event, {
+    Pet.hasMany(models.Events, {
       foreignKey: "pet_id"
     });
     Pet.hasMany(models.Weight, {
       foreignKey: "pet_id"
     })
   };
+  return Pet;
 };
