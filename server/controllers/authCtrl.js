@@ -25,7 +25,7 @@ module.exports.register = (req, res, next) => {
         return next(err);
       }
       console.log("authenticated!", user);
-      let currentUser = { email: user.email, id: user.id };
+      let currentUser = { username: user.email, id: user.id };
       res.status(200).json(currentUser);
     });
   })(req, res, next);
@@ -51,7 +51,7 @@ module.exports.login = (req, res, next) => {
         return next(err);
       }
       console.log("authenticated", user);
-      res.status(200).json({ email: user.email, id: user.id });
+      res.status(200).json({ username: user.email, id: user.id });
     });
   })(req, res, next); // note that authenticate() is called from within the route handler, rather than being used as route middleware. This gives the callback access to the req and res objects through closure.
 };

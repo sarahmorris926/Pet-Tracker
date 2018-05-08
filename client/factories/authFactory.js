@@ -23,7 +23,7 @@ angular
 
         return $q((resolve, reject) => {
           $http.post("/login", userObj).then(user => {
-            currentUser = user.data;
+            currentUser = user;
             resolve(user.data);
           });
         }).catch(err => {
