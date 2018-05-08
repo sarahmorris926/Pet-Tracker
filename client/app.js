@@ -2,6 +2,10 @@
 
 angular.module("PupTracker", ["ngRoute"]).config($routeProvider => {
   $routeProvider
+  .when("/", {
+    templateUrl: "partials/auth-form.html",
+    controller: "AuthCtrl"
+  })
   .when("/test", {
     templateUrl: "partials/test",
     controller: "TestCtrl"
