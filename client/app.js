@@ -9,7 +9,7 @@ angular.module("PupTracker", ["ngRoute"]).config($routeProvider => {
 })
 
 
-Retain auth state
+// Retain auth state
 angular.module("PupTracker").run(($rootScope, $location, $route, $window, AuthFactory) => {
     $rootScope.$on("$routeChangeStart", function(event, next, current) {
       AuthFactory.setUserStatus().then(() => {
