@@ -1,7 +1,7 @@
 "use strict";
 
 angular.module("PupTracker").controller("TestCtrl", function($scope) {
-  $scope.message = "This is a test of the Emergency Web App System";
+  $scope.message = "Thanks for logging in!";
 
   $scope.$on("handleBroadcast", function(event, user) {
     console.log("handleBroadcast called in testCtrl", user);
