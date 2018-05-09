@@ -5,6 +5,11 @@ angular
   .controller("AuthCtrl", function($scope, AuthFactory, $location) {
     $scope.account = {};
 
+    $scope.changeView = (view) => {
+      console.log('view', view);
+      $location.path(view);
+    }
+
     $scope.register = () => {
       $scope.errorMsg = "";
       if ($scope.account.password !== $scope.account.passwordConf) {
