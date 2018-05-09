@@ -80,8 +80,6 @@ const LoginStrategy = new Strategy(
     User = req.app.get("models").User;
 
     const isValidPassword = (userpass, password) => {
-      console.log("isValidPassword", userpass, password);
-
       // hashes the passed-in password and then compares it to the hashed password fetched from the db
       return bCrypt.compareSync(password, userpass);
     };
@@ -89,7 +87,6 @@ const LoginStrategy = new Strategy(
     User.findOne({ where: { email } })
       .then(user => {
         console.log("username stuff", user);
-
         if (!user) {
           return done(null, false, {
             message:
@@ -103,13 +100,11 @@ const LoginStrategy = new Strategy(
         }
         if (!isValidPassword(user.password, password)) {
           console.log("WRONG PASSWORD!!!");
-
           return done(null, false, {
             message: "Incorrect password."
           });
         }
         const userinfo = user.get(); // get returns the data about the object, separate from the rest of the instance Sequelize gives us after calling 'findOne()' above. Could also have added {raw: true} to the query to achieve the same thing
-
         return done(null, userinfo);
       })
       .catch(err => {
@@ -138,9 +133,7 @@ passport.serializeUser((user, done) => {
 // deserialize user
 // We use Sequelize's findById to get the user. Then we use the Sequelize getter function, user.get(), to pass the user data to the 'done' function as an object, stripped of the sequelize instance methods, etc.
 passport.deserializeUser(({ id }, done) => {
-  console.log("user arg", id);
   User.findById(id).then(user => {
-    console.log("Found User in deserielize method", user.get());
     if (user) {
       done(null, user.get());
     } else {

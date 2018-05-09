@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("PupTracker").controller("TestCtrl", function($scope) {
+angular.module("PupTracker").controller("HomeCtrl", function($scope) {
   $scope.message = "Thanks for logging in!";
 
   $scope.$on("handleBroadcast", function(event, user) {

@@ -21,7 +21,7 @@ angular
       console.log('scope account', $scope.account);
       AuthFactory.createUser($scope.account).then(user => {
         AuthFactory.broadcastUserLogin(user);
-        $location.path("/test");
+        $location.path("/home");
       });
     };
 
@@ -30,7 +30,7 @@ angular
       AuthFactory.loginUser($scope.account).then((user) => {
         console.log("logged in controller!!!", user);
         AuthFactory.broadcastUserLogin(user);
-        $location.path("/test");
+        $location.path("/home");
       })
     }
   });
