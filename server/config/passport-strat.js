@@ -41,12 +41,16 @@ const RegistrationStrategy = new Strategy(
         });
       } else {
         console.log("in the else");
+        
         const userPassword = generateHash(password); //function we defined above
         const data =
           // values come from the req.body, added by body-parser when register form request is submitted
           {
             email,
-            password: userPassword
+            password: userPassword, 
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            is_owner: req.body.is_owner
           };
         // create() is a Sequelize method
         User.create(data).then(newUser => {

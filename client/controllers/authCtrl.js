@@ -18,6 +18,7 @@ angular
           "Password and confirmation don't match. Please try again.";
         return null;
       }
+      console.log('scope account', $scope.account);
       AuthFactory.createUser($scope.account).then(user => {
         AuthFactory.broadcastUserLogin(user);
         $location.path("/test");
