@@ -6,6 +6,14 @@ angular.module("PupTracker", ["ngRoute"]).config($routeProvider => {
     templateUrl: "partials/auth-form.html",
     controller: "AuthCtrl"
   })
+  .when("/login", {
+    templateUrl: "partials/login.html",
+    controller: "AuthCtrl"
+  })
+  .when("/register", {
+    templateUrl: "partials/register.html",
+    controller: "AuthCtrl"
+  })
   .when("/test", {
     templateUrl: "partials/test.html",
     controller: "TestCtrl"
