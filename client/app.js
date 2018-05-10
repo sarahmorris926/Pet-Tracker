@@ -18,6 +18,10 @@ angular.module("PupTracker", ["ngRoute"]).config($routeProvider => {
     templateUrl: "partials/home.html",
     controller: "HomeCtrl"
   })
+  .when('/allPets', {
+    templateUrl: "partials/allPets.html",
+    controller: "PetCtrl"
+  })
 })
 
 

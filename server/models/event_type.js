@@ -1,12 +1,12 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  var event_type = sequelize.define('event_type', {
-    event_type: DataTypes.STRING
+  var Event_Type = sequelize.define('Event_Type', {
+    Event_Type: DataTypes.STRING
   }, {});
-  event_type.associate = function(models) {
-    event_type.hasMany(models.Events, {
+  Event_Type.associate = function(models) {
+    Event_Type.hasMany(models.Events, {
       foreignKey: "event_type_id"
     });
   };
-  return event_type;
+  return Event_Type;
 };

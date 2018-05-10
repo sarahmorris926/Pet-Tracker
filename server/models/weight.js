@@ -1,13 +1,13 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  var weight = sequelize.define('weight', {
+  var Weight = sequelize.define('Weight', {
     date: DataTypes.DATE,
-    weight: DataTypes.INTEGER
-  }, {tableName: "weight", timestamps: true});
-  weight.associate = function(models) {
-    weight.belongsTo(models.Pet, {
+    Weight: DataTypes.INTEGER
+  }, {tableName: "Weight", timestamps: true});
+  Weight.associate = function(models) {
+    Weight.belongsTo(models.Pet, {
       foreignKey: "pet_id"
     });
   };
-  return weight;
+  return Weight;
 };

@@ -1,10 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  var user_pet = sequelize.define('user_pet', {
+  var User_Pet = sequelize.define('User_Pet', {
     adoption_date: DataTypes.DATE
-  }, {tableName: 'user_pet', timestamps: false});
-  user_pet.associate = function(models) {
+  }, {tableName: 'User_Pet', timestamps: false});
+  User_Pet.associate = function(models) {
     // associations can be defined here
   };
-  return user_pet;
+  return User_Pet;
 };
