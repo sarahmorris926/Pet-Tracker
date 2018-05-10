@@ -2,16 +2,16 @@
 
 const Router = require('express');
 const router = Router();
-const {} = require('../controllers/petCtrl.js');
+const {createPet} = require('../controllers/petCtrl.js');
 
-function isLoggedIn(req, res, next) {
-  if (req.isAuthenticated()) return next();
-  res.redirect('/login');
-}
+// function isLoggedIn(req, res, next) {
+//   if (req.isAuthenticated()) return next();
+//   res.redirect('/login');
+// }
 
-router.get("/mypets", getUserPets, isLoggedIn);
+// router.get("/mypets", getUserPets, isLoggedIn);
 router.post("/createpet", createPet);
-router.delete('/myproducts/:id', isLoggedIn, deleteProduct);
+// router.delete('/myproducts/:id', isLoggedIn, deleteProduct);
 
 
 

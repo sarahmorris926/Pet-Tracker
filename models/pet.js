@@ -1,15 +1,20 @@
-'use strict';
+"use strict";
+
 module.exports = (sequelize, DataTypes) => {
-  var Pet = sequelize.define('Pet', {
-    first_name: DataTypes.STRING,
-    last_name: DataTypes.STRING,
-    birth_date: DataTypes.DATEONLY,
-    breed: DataTypes.STRING,
-    gender: DataTypes.STRING,
-    food_amount: DataTypes.STRING,
-    food_brand: DataTypes.STRING,
-    notes: DataTypes.TEXT
-  }, {});
+  var Pet = sequelize.define(
+    "Pet",
+    {
+      first_name: DataTypes.STRING,
+      last_name: DataTypes.STRING,
+      birth_date: DataTypes.DATEONLY,
+      breed: DataTypes.STRING,
+      gender: DataTypes.STRING,
+      food_amount: DataTypes.TEXT,
+      food_brand: DataTypes.TEXT,
+      notes: DataTypes.TEXT
+    },
+    { tableName: "pet", timestamps: true }
+  );
   Pet.associate = function(models) {
     Pet.belongsToMany(models.User, {
       through: {

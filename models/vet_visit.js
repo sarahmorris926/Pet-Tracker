@@ -1,10 +1,11 @@
 'use strict';
+
 module.exports = (sequelize, DataTypes) => {
-  var vet_visit = sequelize.define('vet_visit', {
+  var Vet_Visit = sequelize.define('Vet_Visit', {
     date: DataTypes.DATE,
     vaccines: DataTypes.STRING,
     medicine_administered: DataTypes.STRING,
     notes: DataTypes.TEXT
   }, {tableName: "vet_visit", timestamps: true});
-  return vet_visit;
-};
+  return Vet_Visit;
+}

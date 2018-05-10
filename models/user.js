@@ -1,13 +1,14 @@
 'use strict';
-module.exports = (sequelize, DataTypes) => {
+
+module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define('User', {
     first_name: DataTypes.STRING,
     last_name: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
     is_owner: DataTypes.BOOLEAN
-  }, {});
-  User.associate = function(models) {
+  }, {tableName: "users", timestamps: false});
+  User.associate = (models) => {
     User.belongsToMany (models.Pet, {
       through: {
         model: "user_pet"
@@ -16,6 +17,6 @@ module.exports = (sequelize, DataTypes) => {
     User.hasMany (models.Events, {
       foreignKey: "user_id"
     });
-  };
+  }
   return User;
-};
+}
