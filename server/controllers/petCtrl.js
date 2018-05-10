@@ -4,10 +4,15 @@ const express = require('express');
 const app = express();
 const {User, Pet} = require('../models/');
 
-module.exports.getUserPets = (req, res, next) => {
-  Pet
-  if (req.session.passport != undefined) {
-  }
+module.exports.getAllPets = (req, res, next) => {
+  Pet.findAll()
+  .then(allPets => {
+    console.log('all pets', allPets)
+  })
+  .catch(err => {
+    next(err)
+  })
+
 };
 
 module.exports.createPet = (req, res, next) => {
