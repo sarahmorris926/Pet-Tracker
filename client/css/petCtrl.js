@@ -4,9 +4,9 @@ angular
   .module("PupTracker")
   .controller("AllPetCtrl", function($scope, PetFactory, $location) {
 
-    $scope.changeView = (view) => {
+    $scope.changeView = (newView) => {
       console.log('clicked')
-      $location.path(view);
+      $location.path(newView);
     }
 
     $scope.getPets = () => {
