@@ -8,20 +8,26 @@
   <title>Pup Tracker</title>
 </head>
 <body ng-app="PupTracker">
+  <!-- <div ng-include="TODO: path to header"></div> -->
   <h1> Pup Tracker! </h1>
 
   <div ng-view></div>
 
 
+
+  <!-- <div ng-include="TODO: path to footer"></div> -->
+
+  <!-- scripts -->
   <script src="angular/angular.min.js"></script>
   <script src="angular-route/angular-route.min.js"></script>
   <script src="app.js"></script>
 
   <!-- factories -->
   <script src="factories/authFactory.js"></script>
-
+  <script src="factories/petFactory.js"></script>
   <!-- controllers -->
   <script src="controllers/authCtrl.js"></script>
   <script src="controllers/homeCtrl.js"></script>
+  <script src="controllers/petCtrl.js"></script>
 </body>
 </html>

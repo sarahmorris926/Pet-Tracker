@@ -1,3 +1,7 @@
 body {
   background-color: rgb(155, 153, 153);
 }
+
+.petCard {
+  margin: 10px;
+}

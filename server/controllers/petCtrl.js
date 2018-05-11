@@ -14,7 +14,7 @@ module.exports.getAllPets = (req, res, next) => {
     //   let breed = allPets[i].dataValues.breed;
     //   let id = allPets[i].dataValues.id;
     //   console.log(`${first_name} ${last_name} is a(n) ${breed} with an id of ${id}`)
-    //   // res.status(200).json(`${first_name} ${last_name} is a(n) ${breed}`);
+    //   res.status(200).json(`${first_name} ${last_name} is a(n) ${breed}`);
     // }
   })
   .catch(err => {

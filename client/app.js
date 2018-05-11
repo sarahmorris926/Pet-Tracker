@@ -18,11 +18,12 @@ angular.module("PupTracker", ["ngRoute"]).config($routeProvider => {
     templateUrl: "partials/home.html",
     controller: "HomeCtrl"
   })
-  .when('/allPets', {
-    templateUrl: "partials/allPets.html",
-    controller: "PetCtrl"
+  .when('/allpets', {
+    templateUrl: "partials/all-pets.html",
+    controller: "AllPetCtrl"
   })
 })
+
 
 
 // Retain auth state
