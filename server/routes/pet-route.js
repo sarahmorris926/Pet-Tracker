@@ -12,7 +12,6 @@ const {createPet, getAllPets} = require('../controllers/petCtrl.js');
 // router.get("/mypets", getUserPets, isLoggedIn);
 router.get("/getAllPets", getAllPets);
 router.post("/createpet", createPet);
-// router.delete('/myproducts/:id', isLoggedIn, deleteProduct);
 
 
 
