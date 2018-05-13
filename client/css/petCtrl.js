@@ -2,12 +2,7 @@
 
 angular
   .module("PupTracker")
-  .controller("AllPetCtrl", function($scope, PetFactory, $location) {
-
-    $scope.changeView = (newView) => {
-      console.log('clicked')
-      $location.path(newView);
-    }
+  .controller("PetCtrl", function($scope, PetFactory) {
 
     $scope.getPets = () => {
       PetFactory.getAllPets().then(petData => {
