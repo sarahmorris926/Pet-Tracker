@@ -23,6 +23,12 @@ angular.module("PupTracker").factory("PetFactory", ($q, $http, $rootScope) => {
       }).catch(err => {
         reject(err);
       })
+    },
+
+    addPet() {
+      return $q((resolve, reject) => {
+        $http.get
+      })
     }
 
   }

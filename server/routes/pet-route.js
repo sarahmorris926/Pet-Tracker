@@ -2,7 +2,7 @@
 
 const Router = require('express');
 const router = Router();
-const {createPet, getAllPets} = require('../controllers/petCtrl.js');
+const {createPet, getAllPets, getMyPets} = require('../controllers/petCtrl.js');
 
 // function isLoggedIn(req, res, next) {
 //   if (req.isAuthenticated()) return next();
@@ -11,6 +11,7 @@ const {createPet, getAllPets} = require('../controllers/petCtrl.js');
 
 // router.get("/mypets", getUserPets, isLoggedIn);
 router.get("/getAllPets", getAllPets);
+router.get("/getMyPets", getMyPets)
 router.post("/createpet", createPet);
 
 
