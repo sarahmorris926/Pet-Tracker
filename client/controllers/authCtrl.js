@@ -5,6 +5,8 @@ angular
   .controller("AuthCtrl", function($scope, AuthFactory, $location) {
     $scope.account = {};
 
+    $scope.currentUser = AuthFactory.currentUser;
+    
     $scope.changeView = (view) => {
       console.log('view', view);
       $location.path(view);
@@ -33,6 +35,12 @@ angular
         $location.path("/mypets");
       })
     }
+
+    $scope.logout = () => {
+      AuthFactory.logoutUser().then(() => {
+        $location.path('/');
+      })
+    };
 
     
   });

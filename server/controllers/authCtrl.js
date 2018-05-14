@@ -60,7 +60,6 @@ module.exports.login = (req, res, next) => {
 module.exports.logout = (req, res, next) => {
   req.session.destroy(function(err) {
     if (err) return next(err);
-
     res.status(200).end();
   });
 };
