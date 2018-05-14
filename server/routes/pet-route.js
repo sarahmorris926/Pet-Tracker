@@ -11,6 +11,6 @@ function isLoggedIn(req, res, next) {
 
 router.get("/getAllPets", getAllPets);
 router.get("/getMyPets", getMyPets, isLoggedIn)
-router.post("/createpet", createPet);
+router.post("/createPet", createPet);
 
 module.exports = router;
