@@ -4,6 +4,8 @@ angular
   .module("PupTracker")
   .controller("PetCtrl", function($scope, PetFactory, $location) {
 
+    $scope.newPet = {};
+
     $scope.changeView = (view) => {
       console.log('view', view);
       $location.path(view);
@@ -16,8 +18,8 @@ angular
     };
 
     $scope.createPet = (petObj) => {
-      PetFactory.createPet().then(petData => {
-        $scope.newPet = petData;
+      PetFactory.createPet($scope.newPet).then(data => {
+        console.log("added pet", data)
       })
     }
   });
