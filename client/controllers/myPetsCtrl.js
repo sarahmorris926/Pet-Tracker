@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("PupTracker").controller("HomeCtrl", function($scope, $location) {
+angular.module("PupTracker").controller("MyPetsCtrl", function($scope, $location) {
   $scope.message = "Thanks for logging in!";
 
   $scope.changeView = (view) => {

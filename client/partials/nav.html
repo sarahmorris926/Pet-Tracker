@@ -1,14 +1,23 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" ng-controller="NavCtrl">
     <a class="navbar-brand" href="#">Pup Tracker</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="/#!/home">Home <span class="sr-only">(current)</span></a>
-        <!-- <a class="nav-item nav-link" href=""></a>
-        <a class="nav-item nav-link" href="#">Pricing</a>
-        <a class="nav-item nav-link disabled" href="#">Disabled</a> -->
+        <ul class="navbar-nav ml-auto nav justify-content-end">
+          <li class="nav-item" ng-repeat="item in navBar">
+            <a class="nav-item nav-link" href="/#!/mypets">My Pets</a>
+          </li>
+          <li>
+            <a class="nav-item nav-link" href="/#!/account">Account</a>
+          </li>
+          <li>
+            <form method="POST" class="form-inline nav-item" action="#!/">
+              <button ng-show="isLoggedIn()" class="btn btn-link logout" type="submit">Logout</button>
+            </form>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>

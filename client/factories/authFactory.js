@@ -31,6 +31,18 @@ angular
         });
       },
 
+      logoutUser() {
+        return $q((resolve, reject) => {
+            $http.post("/logout").then(user => {
+                console.log("logged out the user")
+                currentUser = null;
+                resolve();
+            });
+        }).catch(err => {
+            reject(err);
+        });
+    },
+
       getCurrentUser() {
         return currentUser;
       },
