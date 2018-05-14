@@ -9,6 +9,8 @@ angular.module("PupTracker").controller("NavCtrl", function($scope, AuthFactory,
     else return false;
   };
 
+  
+
   $scope.$on("handleBroadcast", function(event, user) {
     currentUser = user.id;
     if (currentUser) {
