@@ -1,23 +1,22 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" ng-controller="NavCtrl">
-    <a class="navbar-brand" href="/#!/mypets">Pup Tracker</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <ul class="navbar-nav ml-auto nav justify-content-end">
-          <li>
-            <a class="nav-item nav-link" href="/#!/mypets">My Pets</a>
-          </li>
-          <li>
-            <a class="nav-item nav-link" href="/#!/account">Account</a>
-          </li>
-          <li>
-            <form method="POST" class="form-inline nav-item" action="/#!/">
-              <button ng-show="isLoggedIn()" class="btn logout" type="submit">Logout</button>
-            </form>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <a class="navbar-brand" href="/#!/mypets">Pup Tracker</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto nav justify-content-end">
+      <li>
+        <a class="nav-item nav-link" href="/#!/mypets">My Pets</a>
+      </li>
+      <li>
+        <a class="nav-item nav-link" href="/#!/account">Account</a>
+      </li>
+      <li>
+        <form method="POST" class="form-inline nav-item" action="/#!/">
+          <button ng-show="isLoggedIn()" class="btn logout" type="submit">Logout</button>
+        </form>
+      </li>
+    </ul>
+  </div>
+</nav>

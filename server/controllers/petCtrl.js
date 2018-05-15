@@ -3,7 +3,7 @@
 const express = require('express');
 const app = express();
 const passport = require("passport");
-const {User, Pet} = require('../models/');
+const {User, Pet, User_Pet} = require('../models/');
 
 module.exports.getAllPets = (req, res, next) => {
   Pet.findAll()
@@ -23,6 +23,7 @@ module.exports.createPet = (req, res, next) => {
   .catch(err => {
     next(err);
   });
+  
 };
 
 module.exports.getMyPets = (req, res, next) => {
@@ -42,21 +43,6 @@ module.exports.getMyPets = (req, res, next) => {
   }
 }
 
-// if (req.session.passport != undefined) {
-//   Product.findAll({
-//       raw: true,
-//       where: { user_id: req.user.id },
-//       include: [{ model: Product_Type, attributes: ["label"] }]
-//   })
-//       .then(products => {
-//           res.render('myProducts', { products })
-//       })
-//       .catch(error => {
-//           console.log("error cant get users products", error);
-//       })
-// } else {
-//   res.redirect("/login");
-// }
 
 
 
