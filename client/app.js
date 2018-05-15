@@ -27,7 +27,7 @@ angular.module("PupTracker", ["ngRoute"]).config($routeProvider => {
     })
     .when("/mypets", {
       templateUrl: "partials/my-pets.html",
-      controller: "MyPetsCtrl",
+      controller: "PetCtrl",
       resolve: { isAuth }
     })
     .when("/allpets", {
@@ -44,6 +44,11 @@ angular.module("PupTracker", ["ngRoute"]).config($routeProvider => {
       templateUrl: "partials/account.html",
       controller: "AuthCtrl",
       resolve: { isAuth }
+    })
+    .when("/mypets/events/:id", {
+      templateUrl: "partials/events.html",
+      controller: "EventsCtrl",
+      resolve: {isAuth}
     })
     .otherwise("/");
 });

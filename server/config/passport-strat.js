@@ -85,7 +85,7 @@ const LoginStrategy = new Strategy(
 
     User.findOne({ where: { email } })
       .then(user => {
-        console.log("username stuff", user);
+        // console.log("username stuff", user);
         if (!user) {
           return done(null, false, {
             message:
@@ -122,7 +122,7 @@ const LoginStrategy = new Strategy(
 //serialize. In this function, we will be saving the user id to the session in
 // req.session.passport.user
 passport.serializeUser((user, done) => {
-  console.log("hello, serialize", user);
+  // console.log("hello, serialize", user);
 
   // This saves the whole user obj into the session cookie,
   // but typically you will see just user.id passed in.

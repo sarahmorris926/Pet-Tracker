@@ -17,6 +17,12 @@ angular
       });
     };
 
+    $scope.getMyPets = () => {
+      PetFactory.getMyPets().then(myPetData => {
+        $scope.myPets = myPetData;
+      })
+    };
+
     $scope.createPet = () => {
       PetFactory.createPet($scope.newPet)
       .then(data => {
@@ -24,8 +30,12 @@ angular
       })
     };
 
-    $scope.addPet = () => {
-      PetFactory.getAllPets()
+    // $scope.addPet = () => {
+    //   PetFactory.getAllPets()
+    // };
+
+    $scope.selectActivePet = (id) => {
+      
     }
   });
 
