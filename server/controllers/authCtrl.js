@@ -59,7 +59,12 @@ module.exports.login = (req, res, next) => {
 // logging out
 module.exports.logout = (req, res, next) => {
   req.session.destroy(function(err) {
-    if (err) return next(err);
-    res.status(200).end();
+    if (err) return next(err)
+    next();
+    // res.status(200).end();
   });
+};
+
+module.exports.afterLogout = (req, res, next) => {
+  res.redirect('/');
 };

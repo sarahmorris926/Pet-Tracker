@@ -3,11 +3,11 @@
 const { Router } = require('express');
 const router = Router();
 
-const { register, login, logout } = require('../controllers/authCtrl.js');
+const { register, login, logout, afterLogout } = require('../controllers/authCtrl.js');
 
 router.post("/register", register);
 router.post("/login", login);
-router.post("/logout", logout);
+router.post("/logout", logout, afterLogout);
 
 router.get("/status", (req, res) => {
   console.log("user in status get", req.user);

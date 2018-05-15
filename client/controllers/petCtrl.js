@@ -17,7 +17,7 @@ angular
       });
     };
 
-    $scope.createPet = (petObj) => {
+    $scope.createPet = () => {
       PetFactory.createPet($scope.newPet)
       .then(data => {
         console.log("added pet", data)

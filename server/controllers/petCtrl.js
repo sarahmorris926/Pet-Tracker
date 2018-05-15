@@ -18,12 +18,15 @@ module.exports.getAllPets = (req, res, next) => {
 module.exports.createPet = (req, res, next) => {
   Pet.create(req.body)
   .then( (pet) => {
-    res.status(201).json(pet);
+    console.log("PETTTTTT", pet);
+    pet.addUser(req.user.id)
+    .then( (data) => {
+      console.log('added to the database', data)
+    })
   })
   .catch(err => {
     next(err);
   });
-  
 };
 
 module.exports.getMyPets = (req, res, next) => {

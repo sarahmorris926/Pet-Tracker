@@ -13,6 +13,10 @@
     <input type="date" autofocus="true" ng-model="newPet.birth_date">
   </div>
   <div>
+    Adoption Date (MM-DD-YYYY):
+    <input type="date" autofocus:"true" ng-model="newPet.adoption_date">
+  </div>
+  <div>
     Breed:
     <input type="text" autofocus="true" ng-model="newPet.breed">
   </div>
@@ -38,3 +42,4 @@
     <button class="btn btn-default" ng-click="createPet(); changeView('/allpets');">Create</button>
   </div>
 </section>
+

@@ -49,8 +49,7 @@ const RegistrationStrategy = new Strategy(
             email,
             password: userPassword, 
             first_name: req.body.first_name,
-            last_name: req.body.last_name,
-            is_owner: req.body.is_owner
+            last_name: req.body.last_name
           };
         // create() is a Sequelize method
         User.create(data).then(newUser => {

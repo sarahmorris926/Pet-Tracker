@@ -6,11 +6,11 @@ const {createPet, getAllPets, getMyPets} = require('../controllers/petCtrl.js');
 
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) return next();
-  res.redirect('/login');
+  res.redirect('/');
 }
 
-router.get("/getAllPets", getAllPets);
-router.get("/getMyPets", getMyPets, isLoggedIn)
-router.post("/createPet", createPet);
+router.get("/getAllPets", isLoggedIn, getAllPets);
+router.get("/getMyPets", isLoggedIn, getMyPets)
+router.post("/createPet", isLoggedIn, createPet);
 
 module.exports = router;
