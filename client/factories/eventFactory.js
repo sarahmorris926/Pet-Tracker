@@ -12,9 +12,9 @@ angular.module("PupTracker").factory("EventFactory", ($q, $http, $rootScope) => 
       });
     },
 
-    getAllEvents() {
+    getAllEvents(id) {
       return $q((resolve, reject) => {
-        $http.get("/getAllEvents").then(eventData => {
+        $http.get(`/getAllEvents/${id}`).then(eventData => {
           console.log("got all events: ", eventData);
           resolve(eventData.data);
         });

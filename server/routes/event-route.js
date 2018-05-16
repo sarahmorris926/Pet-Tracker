@@ -9,7 +9,7 @@ function isLoggedIn(req, res, next) {
   res.redirect('/');
 }
 
-router.get("/getAllEvents", isLoggedIn, getAllEvents);
+router.get("/getAllEvents/:id", isLoggedIn, getAllEvents);
 router.get("/getOneEvent", isLoggedIn, getOneEvent);
 router.post("/createEvent", isLoggedIn, createEvent);
 

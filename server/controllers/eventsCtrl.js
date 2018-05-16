@@ -16,7 +16,7 @@ const {
 module.exports.getAllEvents = (req, res, next) => {
   if (req.session.passport != undefined) {
     Pet.findOne({
-      where: {id: }
+      where: {id: req.params.id}
     })
     .then(pet => {
       pet.getEvents().then(data => {
@@ -47,11 +47,11 @@ module.exports.getOneEvent = (req, res, next) => {
 }
 
 module.exports.createEvent = (req, res, next) => {
-  console.log("REQ BODY", req.body)
+  console.log("REQBODY", req.body)
+  req.body.user_id = req.user.id;
   Events.create(req.body) // should be (req.body.eventInfo) - eventInfo will be the object with most of the info that is passed in, not including weight or vet
   .then(addedEvent => {
-    console.log("added event", addedEvent)
-    next();
+    console.log("added event", addedEvent);
   })
   .catch(err => {
     next(err);

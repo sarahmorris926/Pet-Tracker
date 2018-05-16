@@ -2,20 +2,21 @@
   <h3>Create Event</h3>
   <div>
     Length: 
-    <input type="time" autofocus="true" ng-model="">
+    <input type="text" autofocus="true" ng-model="newEvent.length">
   </div>
   <div>
     Date: 
-    <input type="date" autofocus="true" ng-model="">
+    <input type="date" ng-model="newEvent.date">
   </div>
-  <div>
+  <!-- <div>
     Event Type: 
-    <!-- <input type= drop down? autofocus="true" ng-model=""-->
-  </div>
+    <!-- <input type= drop down? autofocus="true" ng-model="">
+  </div> -->
   <div>
     Notes: 
-    <input type="text" autofocus="true" ng-model="">
+    <input type="text" autofocus="true" ng-model="newEvent.notes">
   </div>
+  <button class="btn btn-default" ng-click="createEvent(); ">Create</button>
 </section>
 
 <!-- need to also put in user_id and pet_id at the end of call -->

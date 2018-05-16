@@ -2,25 +2,32 @@
 
 angular
   .module("PupTracker")
-  .controller("EventsCtrl", function($scope, EventFactory, $location) {
-    $scope.petId;
+  .controller("EventsCtrl", function($scope, EventFactory, $location, $routeParams) {
+
+    $scope.newEvent = {}
 
     $scope.getAllEvents = () => {
+      $scope.petId = $routeParams.id;
       console.log("calling get all events");
-      EventFactory.getAllEvents().then(eventData => {
-        $scope.petId = eventData[0].pet_id;
+      EventFactory.getAllEvents($scope.petId).then(eventData => {
         $scope.events = eventData;
       });
     };
 
-    $scope.addEventToPet = () => {
+    $scope.addEventPage = () => {
       $location.path(`/mypets/newevent/${$scope.petId}`);
     };
 
     $scope.createEvent = () => {
-      EventFactory.createNewEvent()
+      $scope.newEvent.pet_id = $routeParams.id;
+      EventFactory.createNewEvent($scope.newEvent)
       .then(data => {
         console.log("added event", data)
       })
-    }
+    };
+
+    $scope.changeView = (id) => {
+      $location.path(`/mypets/events/${id}`)
+    };
+
   });

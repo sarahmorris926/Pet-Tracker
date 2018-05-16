@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var Events = sequelize.define('Events', {
-    length: DataTypes.TIME,
+    length: DataTypes.STRING,
     date: DataTypes.DATEONLY,
     notes: DataTypes.TEXT
   }, {});
