@@ -41,7 +41,7 @@ module.exports.getOneEvent = (req, res, next) => {
 }
 
 module.exports.createEvent = (req, res, next) => {
-  Events.create(req.body)
+  Events.create(req.body.eventInfo) // eventInfo will be the object with most of the info that is passed in, not including weight or vet info
   .then(addedEvent => {
     console.log("added event", addedEvent)
   })

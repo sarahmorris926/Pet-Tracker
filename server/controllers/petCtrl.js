@@ -46,18 +46,15 @@ module.exports.getMyPets = (req, res, next) => {
       where: { id: req.user.id }
     })
       .then(data => {
-        data.getPets()
-        .then(data => {
+        data.getPets().then(data => {
           res.status(200).json(data);
-        })
+        });
       })
       .catch(err => {
         next(err);
       });
   } else {
     res.redirect("/");
-    console.log("not logged in")
+    console.log("not logged in");
   }
 };
-
-
