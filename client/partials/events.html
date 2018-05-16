@@ -1,8 +1,9 @@
 <h3>Timeline</h3>
 <div class="timeline" ng-init="getAllEvents()">
   <div ng-repeat="event in events" class="eventCard">
+    {{event.title}} - 
     {{event.date}} - 
-    {{event.notes}}
+    <button class="" ng-click="">See More</button>
   </div>
   <div>
     <button class="btn btn-default" ng-click="addEventPage()">Add Event</button>

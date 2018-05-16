@@ -26,8 +26,4 @@ angular
         $location.url(`/mypets/events/${data.data.pet_id}`)
       })
     };
-
-    // $scope.changeView = (id) => {
-    // };
-
   });

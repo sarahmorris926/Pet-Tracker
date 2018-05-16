@@ -1,6 +1,10 @@
 <section class="createEventForm">
   <h3>Create Event</h3>
   <div>
+    Title: 
+    <input type="text" autofocus="true" ng-model="newEvent.title">
+  </div>
+  <div>
     Length: 
     <input type="text" autofocus="true" ng-model="newEvent.length">
   </div>
@@ -18,4 +22,3 @@
   </div>
   <button class="btn btn-default" ng-click="createEvent()">Create</button>
 </section>
-
