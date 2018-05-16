@@ -56,7 +56,8 @@ module.exports.getMyPets = (req, res, next) => {
       });
   } else {
     res.redirect("/");
-    console.log("not workin yo")
+    console.log("not logged in")
   }
 };
+
 
