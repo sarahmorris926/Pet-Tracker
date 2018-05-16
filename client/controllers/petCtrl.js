@@ -42,5 +42,3 @@ angular
       $location.path(`/mypets/events/${id}`)
     }
   });
-
-  

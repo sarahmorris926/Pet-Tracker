@@ -11,6 +11,6 @@ function isLoggedIn(req, res, next) {
 
 router.get("/getAllEvents", isLoggedIn, getAllEvents);
 router.get("/getOneEvent", isLoggedIn, getOneEvent);
-router.post("/createEvent", isLoggedIn, createEvent)
+router.post("/createEvent", isLoggedIn, createEvent);
 
 module.exports = router;
