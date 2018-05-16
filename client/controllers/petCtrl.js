@@ -35,7 +35,7 @@ angular
     // };
 
     $scope.selectActivePet = (id) => {
-      
+      $location.path(`/mypets/events/${id}`)
     }
   });
 
