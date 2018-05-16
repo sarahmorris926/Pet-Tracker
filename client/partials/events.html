@@ -1,10 +1,10 @@
 <h3>Timeline</h3>
-<div class="timeline" ng-init"getEvents()">
+<div class="timeline" ng-init="getAllEvents()">
   <div ng-repeat="event in events" class="eventCard">
     {{event.date}} - 
     {{event.notes}}
   </div>
   <div>
-    <button class="btn btn-default" ng-click="addEventToPet()">Add Event</button>
+    <button class="btn btn-default" ng-click="addEventToPet(event[0].pet_id)">Add Event</button>
   </div>
 </div>

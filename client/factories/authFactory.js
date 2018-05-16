@@ -65,7 +65,6 @@ angular
       },
 
       broadcastUserLogin(user) {
-        console.log("calling broadcast", user);
         $rootScope.$broadcast("handleBroadcast", user);
       }
     };

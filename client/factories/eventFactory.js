@@ -2,7 +2,7 @@
 
 angular.module("PupTracker").factory("EventFactory", ($q, $http, $rootScope) => {
   return {
-    createEvent(eventObj) {
+    createNewEvent(eventObj) {
       return $q((resolve, reject) => {
         $http.post("/createEvent", eventObj).then(eventData => {
           resolve(eventData.data);

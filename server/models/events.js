@@ -2,7 +2,7 @@
 module.exports = (sequelize, DataTypes) => {
   var Events = sequelize.define('Events', {
     length: DataTypes.TIME,
-    date: DataTypes.DATE,
+    date: DataTypes.DATEONLY,
     notes: DataTypes.TEXT
   }, {});
   Events.associate = function(models) {

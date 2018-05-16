@@ -51,7 +51,7 @@ angular.module("PupTracker", ["ngRoute"]).config($routeProvider => {
       resolve: {isAuth}
     })
     .when("/mypets/newevent/:id", {
-      templateUrl: "partials/new-event",
+      templateUrl: "partials/new-event.html",
       controller: "EventsCtrl",
       resolve: {isAuth}
     })
@@ -65,7 +65,6 @@ angular
     $rootScope.$on("$routeChangeStart", function(event, next, current) {
       AuthFactory.setUserStatus().then(() => {
         console.log("user", AuthFactory.getCurrentUser());
-        console.log("next", next);
         AuthFactory.broadcastUserLogin(AuthFactory.getCurrentUser());
       });
     });
