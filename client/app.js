@@ -50,6 +50,11 @@ angular.module("PupTracker", ["ngRoute"]).config($routeProvider => {
       controller: "EventsCtrl",
       resolve: {isAuth}
     })
+    .when("/mypets/newevent/:id", {
+      templateUrl: "partials/new-event",
+      controller: "EventsCtrl",
+      resolve: {isAuth}
+    })
     .otherwise("/");
 });
 
