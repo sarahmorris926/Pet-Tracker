@@ -1,2 +1,7 @@
-<h1> EVENTS YO </h1>
-<h3> {{message}} </h3>
+<h3>Timeline</h3>
+<div class="timeline" ng-init"getEvents()">
+  <div ng-repeat="event in events" class="eventCard">
+    {{event.date}} - 
+    {{event.notes}}
+  </div>
+</div>"

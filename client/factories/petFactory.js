@@ -26,13 +26,13 @@ angular.module("PupTracker").factory("PetFactory", ($q, $http, $rootScope) => {
 
     getMyPets() {
       return $q((resolve, reject) => {
-        $http.get('/getMyPets').then(myPetData => {
+        $http.get("/getMyPets").then(myPetData => {
           console.log("here are YOUR pets", myPetData);
           resolve(myPetData.data);
-        })
+        });
       }).catch(err => {
         reject(err);
-      })
+      });
     }
   };
 });
