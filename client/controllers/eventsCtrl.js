@@ -1,12 +1,11 @@
 'use strict';
 
-angular.module("PupTracker").controller("EventsCtrl", function($scope, PetFactory, $location) {
+angular.module("PupTracker").controller("EventsCtrl", function($scope, EventFactory, $location) {
   $scope.getEvents = () => {
-    PetFactory.getEvents().then(eventData => {
+    EventFactory.getEvents().then(eventData => {
       $scope.events = eventData;
     });
   };
-
 
 
 });

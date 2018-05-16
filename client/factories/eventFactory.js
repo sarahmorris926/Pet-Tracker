@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("PupTracker").factory("PetFactory", ($q, $http, $rootScope) => {
+angular.module("PupTracker").factory("EventFactory", ($q, $http, $rootScope) => {
   return {
     createEvent(eventObj) {
       return $q((resolve, reject) => {
@@ -42,3 +42,4 @@ angular.module("PupTracker").factory("PetFactory", ($q, $http, $rootScope) => {
     // }
   };
 });
+
