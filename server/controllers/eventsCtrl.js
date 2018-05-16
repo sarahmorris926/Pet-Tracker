@@ -39,3 +39,13 @@ module.exports.getOneEvent = (req, res, next) => {
     console.log("not logged in")
   }
 }
+
+module.exports.createEvent = (req, res, next) => {
+  Events.create(req.body)
+  .then(addedEvent => {
+    console.log("added event", addedEvent)
+  })
+  .catch(err => {
+    next(err);
+  })
+}

@@ -30,9 +30,12 @@ angular
       })
     };
 
-    // $scope.addPet = () => {
-    //   PetFactory.getAllPets()
-    // };
+    $scope.addPet = () => {
+      PetFactory.addPet($scope.pet)
+      .then(addedPet => {
+        console.log('you added a pet to your fam', addedPet)
+      })
+    };
 
     $scope.selectActivePet = (id) => {
       $location.path(`/mypets/events/${id}`)
