@@ -31,18 +31,17 @@ module.exports.getAllEvents = (req, res, next) => {
 
 module.exports.getOneEvent = (req, res, next) => {
   if (req.session.passport != undefined) {
-    Events.findOne({
-      where: {id: req.body.id}
+    Pet.findOne({
+      where: {id: req.params.id}
     })
-    .then(data => {
-      console.log(data);
+    .then(pet => {
+      pet.getEvents().then(data => {
+        res.status(200).json(data);
+      })
     })
     .catch(err => {
       next(err);
     })
-  } else {
-    res.redirect("/");
-    console.log("not logged in")
   }
 }
 

@@ -1,45 +1,66 @@
-<section class="createPetForm">
-  <h3>Create a Pet</h3>
+<div class="petsHeaderWrapper">
+  <section class="createPetForm">
+    <h3>Create a Pet</h3>
+  </section>
+</div>
+
+<div class="petsContentWrapper">
   <div>
     First Name:
     <input type="text" autofocus="true" ng-model="newPet.first_name">
   </div>
+</div>
+<div class="petsContentWrapper">
   <div>
     Last Name:
     <input type="text" autofocus="true" ng-model="newPet.last_name">
   </div>
+</div>
+<div class="petsContentWrapper">
   <div>
     Birth Date (MM-DD-YYYY):
     <input type="date" autofocus="true" ng-model="newPet.birth_date">
   </div>
+</div>
+<div class="petsContentWrapper">
   <div>
     Adoption Date (MM-DD-YYYY):
-    <input type="date" autofocus:"true" ng-model="newPet.adoption_date">
+    <input type="date" autofocus: "true" ng-model="newPet.adoption_date">
   </div>
+</div>
+<div class="petsContentWrapper">
   <div>
     Breed:
     <input type="text" autofocus="true" ng-model="newPet.breed">
   </div>
+</div>
+<div class="petsContentWrapper">
   <div>
     Gender:
     <input type="radio" name="gender" value="male" ng-model="newPet.gender">Male
     <input type="radio" name="gender" value="female" ng-model="newPet.gender">Female
 
   </div>
+</div>
+<div class="petsContentWrapper">
   <div>
     Food Amount:
     <input type="text" autofocus="true" ng-model="newPet.food_amount">
   </div>
+</div>
+<div class="petsContentWrapper">
   <div>
     Food Brand:
     <input type="text" autofocus="true" ng-model="newPet.food_brand">
   </div>
+</div>
+<div class="petsContentWrapper">
   <div>
     Notes (optional):
     <input type="text" autofocus="true" ng-model="newPet.notes">
   </div>
-  <div>
-    <button class="btn btn-default" ng-click="createPet(); changeView('/mypets');">Create</button>
-  </div>
-</section>
+</div>
 
+<div class="petsBtnWrapper">
+  <button class="btn btn-default petsBtnWrapper" ng-click="createPet(); changeView('/mypets');">Create</button>
+</div>

@@ -1,24 +1,36 @@
-<section class="createEventForm">
-  <h3>Create Event</h3>
+<div class="eventsHeaderWrapper">
+  <section class="createEventForm">
+    <h3>Create Event</h3>
+  </section>
+</div>
+<div class="timelineContentWrapper">
   <div>
-    Title: 
+    Title:
     <input type="text" autofocus="true" ng-model="newEvent.title">
   </div>
+</div>
+<div class="timelineContentWrapper">
   <div>
-    Length: 
+    Length:
     <input type="text" autofocus="true" ng-model="newEvent.length">
   </div>
+</div>
+<div class="timelineContentWrapper">
   <div>
-    Date: 
+    Date:
     <input type="date" ng-model="newEvent.date">
   </div>
-  <!-- <div>
+</div>
+<!-- <div>
     Event Type: 
     <!-- <input type= drop down? autofocus="true" ng-model="">
   </div> -->
+<div class="timelineContentWrapper">
   <div>
-    Notes: 
+    Notes:
     <input type="text" autofocus="true" ng-model="newEvent.notes">
   </div>
+</div>
+<div class="eventsBtnWrapper">
   <button class="btn btn-default" ng-click="createEvent()">Create</button>
-</section>
+</div>
