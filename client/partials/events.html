@@ -3,10 +3,11 @@
 </div>
 
 <div class="eventsHeaderWrapper">
-  <h3>Timeline</h3>
+  <h2>Timeline</h2>
 </div>
 
-<div class="timelineContentWrapper">
+
+<div class="timelineContentWrapper content">
   <div ng-init="getAllEvents()">
     <div ng-repeat="event in events | orderBy:'-date'" class="eventCard">
       {{event.title}} - {{event.date}} -

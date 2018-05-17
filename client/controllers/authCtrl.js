@@ -40,7 +40,6 @@ angular
         $location.path('/');
       })
     };
-
     
   });
 

@@ -20,10 +20,25 @@ body {
   background-color: #456990;
   color: #d7dae0; }
 
+h1, h2, h3, h4 {
+  font-family: 'Pacifico', cursive; }
+
+.navbar-brand {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.5rem;
+  padding: 5px; }
+
+.nav-item {
+  font-family: 'Kreon', serif;
+  font-size: 1.1rem; }
+
 .backBtn {
   margin-top: 10px;
   margin-left: 10px;
   cursor: pointer; }
+
+.content {
+  font-size: 1.2rem; }
 
 .wrapper {
   display: flex;
@@ -41,7 +56,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px; }
+  margin-top: 50px;
+  font-family: 'Kreon', serif; }
 
 .welcomeTextWrapper a {
   color: yellow; }
@@ -56,6 +72,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Kreon', serif; }
+
+.welcomeBtnWrapper button {
   margin: 30px; }
 
 .petsHeaderWrapper {
@@ -69,17 +88,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px; }
+  margin: 10px;
+  font-family: 'Kreon', serif;
+  overflow: scroll; }
 
 .petCard {
-  margin: 10px; }
+  margin: 10px;
+  font-family: 'Kreon', serif; }
 
 .petsBtnWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 30px;
-  cursor: pointer; }
+  cursor: pointer;
+  font-family: 'Kreon', serif; }
 
 .eventsHeaderWrapper {
   display: flex;
@@ -92,17 +115,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px; }
+  margin: 15px;
+  font-family: 'Kreon', serif;
+  overflow: scroll; }
 
 .eventCard {
-  margin: 15px; }
+  margin: 15px;
+  font-family: 'Kreon', serif; }
 
 .eventsBtnWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 30px;
-  cursor: pointer; }
+  cursor: pointer;
+  font-family: 'Kreon', serif; }
 
 .authHeaderWrapper {
   display: flex;
@@ -115,14 +142,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px; }
+  margin: 10px;
+  font-family: 'Kreon', serif; }
 
 .authBtnWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 30px;
-  cursor: pointer; }
+  cursor: pointer;
+  font-family: 'Kreon', serif; }
 
 .footer span {
   color: #e25555; }

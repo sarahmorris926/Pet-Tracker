@@ -27,6 +27,25 @@ body {
   color: #d7dae0;
 }
 
+h1, h2, h3, h4 {
+  font-family: 'Pacifico', cursive;
+}
+
+
+
+////////////////// NAV ////////////////// 
+
+.navbar-brand {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.5rem;
+  padding: 5px;
+}
+
+.nav-item {
+  font-family: 'Kreon', serif;
+  font-size: 1.1rem;
+}
+
 
 ////////////////// CONTENT ////////////////// 
 
@@ -34,6 +53,10 @@ body {
   margin-top: 10px;
   margin-left: 10px;
   cursor: pointer;
+}
+
+.content {
+  font-size: 1.2rem;
 }
 
 .wrapper {
@@ -55,6 +78,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 50px;
+  font-family: 'Kreon', serif;
 }
 
 .welcomeTextWrapper a {
@@ -73,6 +97,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Kreon', serif;
+}
+
+.welcomeBtnWrapper button {
   margin: 30px;
 }
 
@@ -89,10 +117,13 @@ body {
   align-items: center;
   justify-content: center;
   margin: 10px;
+  font-family: 'Kreon', serif;
+  overflow: scroll;
 }
 
 .petCard {
   margin: 10px;
+  font-family: 'Kreon', serif;
 }
 
 .petsBtnWrapper {
@@ -101,6 +132,7 @@ body {
   justify-content: center;
   margin: 30px;
   cursor: pointer;
+  font-family: 'Kreon', serif;
 }
 
 .eventsHeaderWrapper {
@@ -115,11 +147,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px;
+  margin: 15px;
+  font-family: 'Kreon', serif;
+  overflow: scroll;
+
 }
 
 .eventCard {
   margin: 15px;
+  font-family: 'Kreon', serif;
 }
 
 .eventsBtnWrapper {
@@ -128,6 +164,7 @@ body {
   justify-content: center;
   margin: 30px;
   cursor: pointer;
+  font-family: 'Kreon', serif;
 }
 
 .authHeaderWrapper {
@@ -143,6 +180,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: 10px;
+  font-family: 'Kreon', serif;
 }
 
 .authBtnWrapper {
@@ -151,6 +189,7 @@ body {
   justify-content: center;
   margin: 30px;
   cursor: pointer;
+  font-family: 'Kreon', serif;
 }
 
 
