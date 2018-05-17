@@ -1,12 +1,15 @@
-<h3>All the pets!</h3>
-<div class="allPets" ng-init="getPets()">
-  <div ng-repeat="pet in pets" class="petCard">
-    {{pet.first_name}}
-    {{pet.last_name}} - 
-    {{pet.breed}} - 
-    <button ng-click="addPet(pet.id)">Add</button>
+<div class="petsHeaderWrapper">
+  <h3>All the pets!</h3>
+</div>
+
+<div class="petsContentWrapper">
+  <div class="allPets" ng-init="getPets()">
+    <div ng-repeat="pet in pets" class="petCard">
+      {{pet.first_name}} {{pet.last_name}} - {{pet.breed}} -
+      <button class="btn-sm" ng-click="addPet(pet.id)">Add</button>
+    </div>
   </div>
 </div>
-<div>
-  <button class="btn btn-default" ng-click="changeView('/newpet')">Create a Pet</button>
+<div class="petsBtnWrapper">
+  <button class="btn btn-default petsBtnWrapper" ng-click="changeView('/newpet')">Create a Pet</button>
 </div>
