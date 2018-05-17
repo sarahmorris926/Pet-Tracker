@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-const express = require('express');
+const express = require("express");
 const app = express();
 
 // auth
@@ -19,7 +19,6 @@ app.use(
   express.static(__dirname + "/node_modules/angular-route/")
 );
 
-
 app.use(
   session({
     secret: "keyboard cat",
@@ -34,7 +33,6 @@ app.use(passport.session());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(routes);
-
 
 app.use((req, res, next) => {
   let err = new Error("This resource was not found");
