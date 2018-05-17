@@ -35,13 +35,16 @@ angular.module("PupTracker").factory("PetFactory", ($q, $http, $rootScope) => {
       });
     },
 
-    addPet() {
+    addPet(petObj) {
       return $q((resolve, reject) => {
-        $http.get("/addPet").then(addedPet => {
+        $http.post("/addPet", petObj).then(addedPet => {
           console.log("added a pet to your user", addedPet);
           resolve(addedPet.data)
         })
+      }).catch(err => {
+        reject(err);
       })
     }
   };
 });
+

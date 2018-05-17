@@ -28,7 +28,7 @@ module.exports.createPet = (req, res, next) => {
     });
 };
 
-module.exports.addPet = ({ app, body: { user_id, pet_id } }, res, next) => {
+module.exports.addPet = (req, res, next) => {
   if (req.session.passport != undefined) {
     pet.addUser(req.user.id).then(data => {
       user.addPet(data.pet_id).then(data => {

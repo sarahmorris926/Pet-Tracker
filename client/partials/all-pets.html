@@ -10,7 +10,7 @@
   <div class="allPets" ng-init="getPets()">
     <div ng-repeat="pet in pets" class="petCard">
       {{pet.first_name}} {{pet.last_name}} - {{pet.breed}} -
-      <button class="btn-sm" ng-click="addPet(pet.id)">Add</button>
+      <button class="btn-sm" ng-click="addPet()">Add</button>
     </div>
   </div>
 </div>

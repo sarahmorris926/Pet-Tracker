@@ -21,7 +21,8 @@ body {
   color: #d7dae0; }
 
 h1, h2, h3, h4 {
-  font-family: 'Pacifico', cursive; }
+  font-family: 'Pacifico', cursive;
+  font-size: 5rem; }
 
 .navbar-brand {
   font-family: 'Pacifico', cursive;
