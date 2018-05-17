@@ -1,19 +1,29 @@
-<section class="auth form">
-  <h2>Login or Register</h2>
-  <h3 class="formError">{{errorMsg}}</h3>
+<div class="authHeaderWrapper">
+  <section class="auth form">
+    <h2>Login</h2>
+    <h3 class="formError">{{errorMsg}}</h3>
+  </section>
+</div>
+
+<div class="authContentWrapper">
   <div>
-    Email: 
+    Email:
     <input type="text" autofocus="true" ng-model="account.email">
   </div>
+</div>
+<div class="authContentWrapper">
   <div>
-    Password: 
+    Password:
     <input type="password" autofocus="true" ng-model="account.password">
   </div>
+</div>
+<div class="authContentWrapper">
   <div>
-    Password Confirmation: 
+    Password Confirmation:
     <input type="password" ng-model="account.passwordConf">
   </div>
-  <div>
-    <button class="btn btn-info" ng-click="login()">Login</button>
-  </div>
-</section>
+</div>
+
+<div class="authBtnWrapper">
+  <button class="btn btn-info authBtnWrapper" ng-click="login()">Login</button>
+</div>
