@@ -20,6 +20,10 @@ body {
   background-color: #456990;
   color: #d7dae0; }
 
+.backBtn {
+  margin-top: 10px;
+  margin-left: 10px; }
+
 .wrapper {
   display: flex;
   align-items: center;

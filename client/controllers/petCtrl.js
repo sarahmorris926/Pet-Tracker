@@ -2,7 +2,7 @@
 
 angular
   .module("PupTracker")
-  .controller("PetCtrl", function($scope, PetFactory, $location) {
+  .controller("PetCtrl", function($scope, PetFactory, $location, $window) {
     console.log("PET FACTORY", PetFactory)
     $scope.newPet = {};
 
@@ -37,6 +37,10 @@ angular
     // $scope.addPet = () => {
     //   PetFactory.getAllPets()
     // };
+
+    $scope.backBtn = () => {
+      $window.history.back();
+    }
 
     $scope.selectActivePet = (id) => {
       $location.path(`/mypets/events/${id}`)
