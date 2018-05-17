@@ -88,6 +88,9 @@ body {
   justify-content: center;
   margin: 10px; }
 
+.eventCard {
+  margin: 15px; }
+
 .eventsBtnWrapper {
   display: flex;
   align-items: center;

@@ -18,6 +18,11 @@ angular
       $location.path(`/mypets/newevent/${$scope.petId}`);
     };
 
+    // $scope.getOneEvent = () => {
+    //   $scope.petId = $routeParams.id;
+    //   EventFactory.getOneEvent($scope.petId).then
+    // }
+
     $scope.createEvent = () => {
       $scope.newEvent.pet_id = $routeParams.id;
       EventFactory.createNewEvent($scope.newEvent)

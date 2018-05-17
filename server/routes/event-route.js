@@ -10,7 +10,7 @@ function isLoggedIn(req, res, next) {
 }
 
 router.get("/getAllEvents/:id", isLoggedIn, getAllEvents);
-router.get("/getOneEvent/:id", isLoggedIn, getOneEvent);
+router.get("/getOneEvent", isLoggedIn, getOneEvent);
 router.post("/createEvent", isLoggedIn, createEvent);
 
 module.exports = router;
