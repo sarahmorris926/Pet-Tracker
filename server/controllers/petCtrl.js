@@ -32,12 +32,11 @@ module.exports.addPet = (req, res, next) => {
   if (req.session.passport != undefined) {
     Pet.findOne({
       where: { id: req.body.id }
-    })
-    .then(pet => {
+    }).then(pet => {
       pet.addUser(req.user.id).then(data => {
-        console.log('DATA MOTHERFUCKER', data);
+        console.log("DATA MOTHERFUCKER", data);
       });
-    })
+    });
   } else {
     res.redirect("/");
   }

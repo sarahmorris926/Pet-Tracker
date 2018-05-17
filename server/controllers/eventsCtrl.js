@@ -26,7 +26,7 @@ module.exports.getAllEvents = (req, res, next) => {
       .catch(err => {
         next(err);
       });
-  };
+  }
 };
 
 module.exports.getOneEvent = (req, res, next) => {
@@ -42,13 +42,13 @@ module.exports.getOneEvent = (req, res, next) => {
       .catch(err => {
         next(err);
       });
-  };
+  }
 };
 
 module.exports.createEvent = (req, res, next) => {
   console.log("REQBODY", req.body);
   req.body.user_id = req.user.id;
-  Events.create(req.body) // should be (req.body.eventInfo) - eventInfo will be the object with most of the info that is passed in, not including weight or vet
+  Events.create(req.body)
     .then(addedEvent => {
       console.log("added event", addedEvent);
       res.status(200).json(addedEvent);

@@ -1,13 +1,17 @@
-'use strict';
+"use strict";
 
-const Router = require('express');
+const Router = require("express");
 const router = Router();
-const { getAllEventTypes, createEventType, getOneEventType} = require('../controllers/eventTypeCtrl');
+const {
+  getAllEventTypes,
+  createEventType,
+  getOneEventType
+} = require("../controllers/eventTypeCtrl");
 
 function isLoggedIn(req, res, next) {
-  if(req.isAuthenticated()) return next();
-  res.redirect('/');
-};
+  if (req.isAuthenticated()) return next();
+  res.redirect("/");
+}
 
 router.get("/getAllEventTypes", isLoggedIn, getAllEventTypes);
 router.get("/getOneEventType", isLoggedIn, getOneEventType);

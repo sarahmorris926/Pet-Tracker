@@ -1,12 +1,17 @@
-'use strict';
+"use strict";
 
-const Router = require('express');
+const Router = require("express");
 const router = Router();
-const {createPet, getAllPets, getMyPets, addPet} = require('../controllers/petCtrl.js');
+const {
+  createPet,
+  getAllPets,
+  getMyPets,
+  addPet
+} = require("../controllers/petCtrl.js");
 
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) return next();
-  res.redirect('/');
+  res.redirect("/");
 }
 
 router.get("/getAllPets", isLoggedIn, getAllPets);
