@@ -4,7 +4,7 @@
 
 <div class="timelineContentWrapper">
   <div ng-init="getAllEvents()">
-    <div ng-repeat="event in events" class="eventCard">
+    <div ng-repeat="event in events | orderBy:'-date'" class="eventCard">
       {{event.title}} - {{event.date}} -
       <button class="btn btn-sm" ng-click="">See More</button>
     </div>

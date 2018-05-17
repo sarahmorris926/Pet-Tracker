@@ -19,7 +19,8 @@ module.exports.getAllEvents = (req, res, next) => {
       where: {id: req.params.id}
     })
     .then(pet => {
-      pet.getEvents().then(data => {
+      pet.getEvents()
+      .then(data => {
         res.status(200).json(data)
       })
     })
