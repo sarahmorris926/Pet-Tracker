@@ -4,8 +4,6 @@ angular
   .module("PupTracker")
   .controller("AuthCtrl", function($scope, AuthFactory, $location) {
 
-    console.log("Welcome to Pup Tracker! ");
-
     $scope.account = {};
 
     $scope.currentUser = AuthFactory.currentUser;

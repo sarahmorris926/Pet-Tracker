@@ -11,7 +11,6 @@ angular
       getAllEvents(id) {
         return $q((resolve, reject) => {
           $http.get(`/getAllEvents/${id}`).then(eventData => {
-            console.log("got all events: ", eventData);
             resolve(eventData);
           });
         }).catch(err => {
