@@ -46,6 +46,18 @@ html, body {
   margin-top: 50px;
 }
 
+.welcomeTextWrapper a {
+  color: yellow;
+}
+
+.welcomeTextWrapper a:hover {
+  color: salmon;
+}
+
+.welcomeTextWrapper a:visited {
+  color: lightgrey;
+}
+
 .welcomeBtnWrapper {
   display: flex;
   align-items: center;
@@ -65,12 +77,18 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 10px;
+}
+
+.petCard {
+  margin: 10px;
 }
 
 .petsBtnWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 30px;
 }
 
 

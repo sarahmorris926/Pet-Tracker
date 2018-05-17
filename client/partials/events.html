@@ -1,10 +1,11 @@
-<h3>Timeline</h3>
-<section class="timeline">
+<div class="eventsHeaderWrapper">
+  <h3>Timeline</h3>
+</div>
+
 <div ng-init="getAllEvents()">
   <div ng-repeat="event in events" class="eventCard">
-    {{event.title}} - 
-    {{event.date}} - 
-    <button class="btn btn-default" ng-click="">See More</button>
+    {{event.title}} - {{event.date}} -
+    <button class="btn btn-sm" ng-click="">See More</button>
   </div>
   <div>
     <button class="btn btn-default" ng-click="addEventPage()">Add Event</button>

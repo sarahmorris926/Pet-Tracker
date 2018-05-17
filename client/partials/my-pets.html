@@ -1,14 +1,15 @@
 <div class="petsHeaderWrapper">
   <h4> My Pets </h4>
 </div>
+
 <div class="petsContentWrapper">
   <div ng-init="getMyPets()">
     <div ng-repeat="pet in myPets" class="petCard">
       {{pet.first_name}} {{pet.last_name}} - {{pet.breed}} -
-      <button ng-click="selectActivePet(pet.id)">Select a Pet</button>
+      <button class="btn-sm" ng-click="selectActivePet(pet.id)">Select a Pet</button>
     </div>
   </div>
-  <div class="petsBtnWrapper">
-    <button class="btn btn-default petsBtnWrapper" ng-click="changeView('/allpets')">See All Pets</button>
-  </div>
 </div>
+    <div class="petsBtnWrapper">
+      <button class="btn btn-default petsBtnWrapper" ng-click="changeView('/allpets')">See All Pets</button>
+    </div>
