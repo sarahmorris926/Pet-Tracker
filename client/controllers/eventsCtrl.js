@@ -2,8 +2,12 @@
 
 angular
   .module("PupTracker")
-  .controller("EventsCtrl", function($scope, EventFactory, $location, $routeParams) {
+  .controller("EventsCtrl", function($scope, EventFactory, $location, $routeParams, $window) {
 
+    $scope.backBtn = () => {
+      $window.history.back();
+    }
+    
     $scope.newEvent = {}
 
     $scope.getAllEvents = () => {
@@ -31,4 +35,13 @@ angular
         $location.url(`/mypets/events/${data.data.pet_id}`)
       })
     };
+
+    $scope.open = () => {
+      $scope.showModal = true;
+    }
+
+    $scope.close = () => {
+      $scope.showModal = false;
+    }
+
   });
