@@ -1,11 +1,10 @@
 <div class="petsHeaderWrapper">
   <h1> My Pets </h1>
 </div>
-
 <div class="petsContentWrapper content">
   <div ng-init="getMyPets()">
     <div ng-repeat="pet in myPets" class="petCard">
-      {{pet.first_name}} {{pet.last_name}} - {{pet.breed}} 
+      {{pet.first_name}} {{pet.last_name}} - {{pet.breed}}
       <button class="btn-sm" ng-click="selectActivePet(pet.id)">Select a Pet</button>
     </div>
   </div>

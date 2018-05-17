@@ -1,19 +1,15 @@
 <div>
   <button class="backBtn" ng-click="backBtn()">Back to My Pets</button>
 </div>
-
 <div class="eventsHeaderWrapper">
   <h1>Timeline</h1>
 </div>
-
-
 <div class="timelineContentWrapper content">
   <div ng-init="getAllEvents()">
     <div ng-repeat="event in events | orderBy:'-date'" class="eventCard">
       {{event.title}} - {{event.date}} -
       <button class="btn btn-sm" data-toggle="modal" data-target="#eventModal" ng-click="getEventDetails(event)">See More</button>
     </div>
-
     <!-- Modal -->
     <div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="eventModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -32,8 +28,6 @@
         </div>
       </div>
     </div>
-
-
   </div>
 </div>
 <div class="eventsBtnWrapper">
