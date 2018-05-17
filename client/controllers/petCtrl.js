@@ -5,7 +5,6 @@ angular
   .controller("PetCtrl", function($scope, PetFactory, $location, $window) {
     console.log("PET FACTORY", PetFactory);
     $scope.newPet = {};
-    $scope.addedPet = {};
 
     $scope.changeView = view => {
       console.log("view", view);
@@ -35,8 +34,11 @@ angular
       });
     };
 
-    $scope.addPet = () => {
+    $scope.addPet = (pet) => {
+      console.log("PET", pet);
+      $scope.addedPet = pet;
       PetFactory.addPet($scope.addedPet).then(data => {
+
         console.log("added pet to your house", data);
       });
     };

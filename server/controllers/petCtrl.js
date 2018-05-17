@@ -30,11 +30,14 @@ module.exports.createPet = (req, res, next) => {
 
 module.exports.addPet = (req, res, next) => {
   if (req.session.passport != undefined) {
-    pet.addUser(req.user.id).then(data => {
-      user.addPet(data.pet_id).then(data => {
-        console.log("added join table instance", data);
+    Pet.findOne({
+      where: { id: req.body.id }
+    })
+    .then(pet => {
+      pet.addUser(req.user.id).then(data => {
+        console.log('DATA MOTHERFUCKER', data);
       });
-    });
+    })
   } else {
     res.redirect("/");
   }

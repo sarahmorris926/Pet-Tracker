@@ -9,8 +9,8 @@
 <div class="petsContentWrapper content">
   <div class="allPets" ng-init="getPets()">
     <div ng-repeat="pet in pets" class="petCard">
-      {{pet.first_name}} {{pet.last_name}} - {{pet.breed}} -
-      <button class="btn-sm" ng-click="addPet()">Add</button>
+      {{pet.first_name}} {{pet.last_name}} - {{pet.breed}}
+      <button class="btn-sm" ng-click="addPet(pet)">Add</button>
     </div>
   </div>
 </div>
