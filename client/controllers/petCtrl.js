@@ -34,11 +34,10 @@ angular
       });
     };
 
-    $scope.addPet = (pet) => {
+    $scope.addPet = pet => {
       console.log("PET", pet);
       $scope.addedPet = pet;
       PetFactory.addPet($scope.addedPet).then(data => {
-
         console.log("added pet to your house", data);
       });
     };

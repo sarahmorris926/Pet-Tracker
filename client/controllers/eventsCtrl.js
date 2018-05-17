@@ -2,13 +2,18 @@
 
 angular
   .module("PupTracker")
-  .controller("EventsCtrl", function($scope, EventFactory, $location, $routeParams, $window) {
-
+  .controller("EventsCtrl", function(
+    $scope,
+    EventFactory,
+    $location,
+    $routeParams,
+    $window
+  ) {
     $scope.backBtn = () => {
       $window.history.back();
-    }
-    
-    $scope.newEvent = {}
+    };
+
+    $scope.newEvent = {};
 
     $scope.getAllEvents = () => {
       $scope.petId = $routeParams.id;
@@ -24,27 +29,25 @@ angular
 
     $scope.createEvent = () => {
       $scope.newEvent.pet_id = $routeParams.id;
-      EventFactory.createNewEvent($scope.newEvent)
-      .then(data => {
-        console.log("added event ON CLIENT SIDE", data)
-        $location.url(`/mypets/events/${data.data.pet_id}`)
-      })
+      EventFactory.createNewEvent($scope.newEvent).then(data => {
+        console.log("added event ON CLIENT SIDE", data);
+        $location.url(`/mypets/events/${data.data.pet_id}`);
+      });
     };
 
     $scope.open = () => {
       $scope.showModal = true;
-    }
+    };
 
     $scope.close = () => {
       $scope.showModal = false;
-    }
+    };
 
-    $scope.getEventDetails = (event) => {
-      console.log('event', event);
+    $scope.getEventDetails = event => {
+      console.log("event", event);
       $scope.modalTitle = event.title;
       $scope.modalDate = event.date;
       $scope.modalLength = event.length;
       $scope.modalNotes = event.notes;
-    }
-
+    };
   });

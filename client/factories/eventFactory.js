@@ -5,8 +5,7 @@ angular
   .factory("EventFactory", ($q, $http, $rootScope) => {
     return {
       createNewEvent(eventObj) {
-        return $http
-          .post("/createEvent", eventObj)
+        return $http.post("/createEvent", eventObj);
       },
 
       getAllEvents(id) {
@@ -29,13 +28,5 @@ angular
           reject(err);
         });
       }
-
-      // editEvent() {
-      //   return $q((resolve, reject) => {
-      //     $http.put("/editEvent").then(editedEvent => {
-      //       resolve(editedEvent.data);
-      //     })
-      //   })
-      // }
     };
   });

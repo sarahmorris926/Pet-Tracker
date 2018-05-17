@@ -6,11 +6,11 @@ angular
     $scope.account = {};
 
     $scope.currentUser = AuthFactory.currentUser;
-    
-    $scope.changeView = (view) => {
-      console.log('view', view);
+
+    $scope.changeView = view => {
+      console.log("view", view);
       $location.path(view);
-    }
+    };
 
     $scope.register = () => {
       $scope.errorMsg = "";
@@ -20,7 +20,7 @@ angular
           "Password and confirmation don't match. Please try again.";
         return null;
       }
-      console.log('scope account', $scope.account);
+      console.log("scope account", $scope.account);
       AuthFactory.createUser($scope.account).then(user => {
         AuthFactory.broadcastUserLogin(user);
         $location.path("/mypets");
@@ -29,18 +29,15 @@ angular
 
     $scope.login = () => {
       console.log("scope account?", $scope.account);
-      AuthFactory.loginUser($scope.account).then((user) => {
+      AuthFactory.loginUser($scope.account).then(user => {
         AuthFactory.broadcastUserLogin(user);
         $location.path("/mypets");
-      })
-    }
+      });
+    };
 
     $scope.logout = () => {
       AuthFactory.logoutUser().then(() => {
-        $location.path('/');
-      })
+        $location.path("/");
+      });
     };
-    
   });
-
-

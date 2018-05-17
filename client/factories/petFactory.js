@@ -39,12 +39,11 @@ angular.module("PupTracker").factory("PetFactory", ($q, $http, $rootScope) => {
       return $q((resolve, reject) => {
         $http.post("/addPet", petObj).then(addedPet => {
           console.log("added a pet to your user", addedPet);
-          resolve(addedPet.data)
-        })
+          resolve(addedPet.data);
+        });
       }).catch(err => {
         reject(err);
-      })
+      });
     }
   };
 });
-
