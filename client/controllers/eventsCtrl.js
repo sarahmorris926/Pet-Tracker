@@ -42,6 +42,8 @@ angular
     $scope.getEventDetails = (event) => {
       console.log('event', event);
       $scope.modalTitle = event.title;
+      $scope.modalDate = event.date;
+      $scope.modalLength = event.length;
       $scope.modalNotes = event.notes;
     }
 
