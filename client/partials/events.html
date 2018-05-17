@@ -11,30 +11,32 @@
   <div ng-init="getAllEvents()">
     <div ng-repeat="event in events | orderBy:'-date'" class="eventCard">
       {{event.title}} - {{event.date}} -
-      <button class="btn btn-sm" data-toggle="modal">See More</button>
+      <button class="btn btn-sm" data-toggle="modal" data-target="#eventModal" ng-click="getEventDetails(event)">See More</button>
     </div>
 
-    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal -->
+    <div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="eventModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="eventModalLabel">{{modalTitle}}</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <p>Modal Body!</p>
+            <p>{{modalNotes}}</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
-
-
     </div>
+
+
   </div>
-  <div class="eventsBtnWrapper">
-    <button class="btn btn-default eventsBtnWrapper" ng-click="addEventPage()">Add Event</button>
-  </div>
+</div>
+<div class="eventsBtnWrapper">
+  <button class="btn btn-default eventsBtnWrapper" ng-click="addEventPage()">Add Event</button>
+</div>

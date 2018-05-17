@@ -53,6 +53,7 @@ h1, h2, h3, h4 {
   margin-top: 10px;
   margin-left: 10px;
   cursor: pointer;
+  font-family: 'Kreon', serif;
 }
 
 .content {
@@ -192,7 +193,9 @@ h1, h2, h3, h4 {
   font-family: 'Kreon', serif;
 }
 
-
+.modal-title h1, h2, h3, h4{
+  color: black;
+}
 
 
 ////////////////// FOOTER ////////////////// 

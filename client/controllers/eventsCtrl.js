@@ -39,4 +39,10 @@ angular
       $scope.showModal = false;
     }
 
+    $scope.getEventDetails = (event) => {
+      console.log('event', event);
+      $scope.modalTitle = event.title;
+      $scope.modalNotes = event.notes;
+    }
+
   });
