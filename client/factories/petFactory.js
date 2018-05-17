@@ -5,7 +5,6 @@ angular.module("PupTracker").factory("PetFactory", ($q, $http, $rootScope) => {
     createPet(petObj) {
       return $q((resolve, reject) => {
         $http.post("/createPet", petObj).then(petData => {
-          console.log("new pet created", petData);
           resolve(petData.data);
         });
       }).catch(err => {
@@ -16,7 +15,6 @@ angular.module("PupTracker").factory("PetFactory", ($q, $http, $rootScope) => {
     getAllPets() {
       return $q((resolve, reject) => {
         $http.get("/getAllPets").then(petData => {
-          console.log("here are all of the pets", petData);
           resolve(petData.data);
         });
       }).catch(err => {
@@ -27,7 +25,6 @@ angular.module("PupTracker").factory("PetFactory", ($q, $http, $rootScope) => {
     getMyPets() {
       return $q((resolve, reject) => {
         $http.get("/getMyPets").then(myPetData => {
-          console.log("here are YOUR pets", myPetData);
           resolve(myPetData.data);
         });
       }).catch(err => {
@@ -38,7 +35,6 @@ angular.module("PupTracker").factory("PetFactory", ($q, $http, $rootScope) => {
     addPet(petObj) {
       return $q((resolve, reject) => {
         $http.post("/addPet", petObj).then(addedPet => {
-          console.log("added a pet to your user", addedPet);
           resolve(addedPet.data);
         });
       }).catch(err => {
