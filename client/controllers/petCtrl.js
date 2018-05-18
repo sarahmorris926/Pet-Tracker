@@ -3,11 +3,9 @@
 angular
   .module("PupTracker")
   .controller("PetCtrl", function($scope, PetFactory, $location, $window) {
-    console.log("PET FACTORY", PetFactory);
     $scope.newPet = {};
 
     $scope.changeView = view => {
-      console.log("view", view);
       $location.path(view);
     };
 
@@ -23,22 +21,18 @@ angular
           $scope.myPets = myPetData;
         })
         .catch(err => {
-          console.log("error!!! in pet ctrl", err);
           next(err);
         });
     };
 
     $scope.createPet = () => {
       PetFactory.createPet($scope.newPet).then(data => {
-        console.log("added pet", data);
       });
     };
 
     $scope.addPet = pet => {
-      console.log("PET", pet);
       $scope.addedPet = pet;
       PetFactory.addPet($scope.addedPet).then(data => {
-        console.log("added pet to your house", data);
       });
     };
 

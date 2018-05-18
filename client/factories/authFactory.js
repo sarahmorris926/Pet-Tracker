@@ -17,8 +17,6 @@ angular.module("PupTracker").factory("AuthFactory", ($q, $http, $rootScope) => {
     },
 
     loginUser(userObj) {
-      console.log("userObj", userObj);
-
       return $q((resolve, reject) => {
         $http.post("/login", userObj).then(user => {
           currentUser = user;
@@ -49,8 +47,6 @@ angular.module("PupTracker").factory("AuthFactory", ($q, $http, $rootScope) => {
       return $http
         .get("/status")
         .then(user => {
-          console.log("user in set user status", user);
-
           if (user) {
             currentUser = user.data;
           } else {

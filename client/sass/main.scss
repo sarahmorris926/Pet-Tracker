@@ -84,7 +84,7 @@ h1, h2, h3, h4 {
 }
 
 .welcomeTextWrapper a {
-  color: yellow;
+  color: orange;
 }
 
 .welcomeTextWrapper a:hover {
@@ -92,7 +92,7 @@ h1, h2, h3, h4 {
 }
 
 .welcomeTextWrapper a:visited {
-  color: lightgrey;
+  color: rgb(36, 170, 24);
 }
 
 .welcomeBtnWrapper {
@@ -158,6 +158,11 @@ h1, h2, h3, h4 {
 .eventCard {
   margin: 15px;
   font-family: 'Kreon', serif;
+}
+
+.modal-content {
+  color: black;
+  border: none;
 }
 
 .eventsBtnWrapper {

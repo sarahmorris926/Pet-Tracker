@@ -59,7 +59,6 @@ angular
   .run(($rootScope, $location, $route, $window, AuthFactory) => {
     $rootScope.$on("$routeChangeStart", function(event, next, current) {
       AuthFactory.setUserStatus().then(() => {
-        console.log("user", AuthFactory.getCurrentUser());
         AuthFactory.broadcastUserLogin(AuthFactory.getCurrentUser());
       });
     });

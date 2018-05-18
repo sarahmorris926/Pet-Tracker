@@ -3,12 +3,12 @@
 angular
   .module("PupTracker")
   .controller("AuthCtrl", function($scope, AuthFactory, $location) {
+
     $scope.account = {};
 
     $scope.currentUser = AuthFactory.currentUser;
 
     $scope.changeView = view => {
-      console.log("view", view);
       $location.path(view);
     };
 
@@ -20,7 +20,6 @@ angular
           "Password and confirmation don't match. Please try again.";
         return null;
       }
-      console.log("scope account", $scope.account);
       AuthFactory.createUser($scope.account).then(user => {
         AuthFactory.broadcastUserLogin(user);
         $location.path("/mypets");
@@ -28,7 +27,6 @@ angular
     };
 
     $scope.login = () => {
-      console.log("scope account?", $scope.account);
       AuthFactory.loginUser($scope.account).then(user => {
         AuthFactory.broadcastUserLogin(user);
         $location.path("/mypets");
