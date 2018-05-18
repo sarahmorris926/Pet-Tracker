@@ -62,13 +62,13 @@ h1, h2, h3, h4 {
   font-family: 'Kreon', serif; }
 
 .welcomeTextWrapper a {
-  color: yellow; }
+  color: orange; }
 
 .welcomeTextWrapper a:hover {
   color: salmon; }
 
 .welcomeTextWrapper a:visited {
-  color: lightgrey; }
+  color: #24aa18; }
 
 .welcomeBtnWrapper {
   display: flex;
