@@ -7,7 +7,8 @@
     "create-db": "node create-db.js",
     "sass": "node-sass client/sass/ -o client/css/",
     "lint": "eslint --color **/*.js --ignore-pattern node_modules/",
-    "dev": "concurrently \"nodemon server.js\" \"rerun-script\""
+    "dev": "concurrently \"nodemon server.js\" \"rerun-script\"",
+    "start": "node server.js"
   },
   "watches": {
     "sass": [

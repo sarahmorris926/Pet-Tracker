@@ -10,7 +10,7 @@ html, body {
   height: 100%; }
 
 #container {
-  min-height: 100vh;
+  min-height: 100%;
   overflow: hidden;
   display: block;
   position: relative;
@@ -18,7 +18,8 @@ html, body {
 
 body {
   background-color: #456990;
-  color: #d7dae0; }
+  color: #d7dae0;
+  height: 100%; }
 
 h1, h2, h3, h4 {
   font-family: 'Pacifico', cursive;
@@ -40,7 +41,8 @@ h1, h2, h3, h4 {
   font-family: 'Kreon', serif; }
 
 .content {
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  overflow: scroll; }
 
 .wrapper {
   display: flex;
@@ -121,9 +123,13 @@ h1, h2, h3, h4 {
   font-family: 'Kreon', serif;
   overflow: scroll; }
 
+#timelineWrapper {
+  overflow: scroll; }
+
 .eventCard {
   margin: 15px;
-  font-family: 'Kreon', serif; }
+  font-family: 'Kreon', serif;
+  overflow: scroll; }
 
 .modal-content {
   color: black;
